@@ -1,8 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-      "${workspaceFolder}/_pypackages_/3.10/lib"
-    ],
-    "python.autoComplete.extraPaths": [
-      "${workspaceFolder}/_pypackages_/3.10/lib"
-    ]
-}
