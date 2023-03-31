@@ -25,12 +25,12 @@ class Cor(models.Model):
         return self.descricao
 
     class Meta:
-        verbose_name_plural = "Cores"
+        verbose_names_plural = "Cores"
 
 class Veiculo(models.Model):
-    marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="Veiculos")
-    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="Veiculos")
-    cor = models.ForeignKey(Cor, on_delete=models.PROTECT, related_name="Veiculos")
+    marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="Veículos")
+    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="Veículos")
+    cor = models.ForeignKey(Cor, on_delete=models.PROTECT, related_name="Veículos")
     ano = models.IntegerField(null=True, blank=True, default=0)
     preco = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     
