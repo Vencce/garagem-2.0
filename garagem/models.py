@@ -31,16 +31,6 @@ class Cor(models.Model):
     class Meta:
         verbose_name_plural = "Cores"
 
-
-class Modelo(models.Model):
-    descricao = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.descricao
-    
-    class Meta:
-        verbose_name_plural = "Modelos"
-
 class Veiculo(models.Model):
     preco = models.DecimalField(max_digits=10, decimal_places=2, default=0, null=True, blank=True)
     ano = models.IntegerField(null=True, blank=True)
@@ -50,6 +40,13 @@ class Veiculo(models.Model):
 
     def __str__(self):
         return f"{self.marca} {self.categoria} {self.cor} {self.ano}"
-    
+
     class Meta:
         verbose_name = "Veículo"
+
+class Modelo(models.Model):
+    descricao = models.CharField(max_length=100)
+    
+    def __str__(self):
+
+        return self.descricao
